@@ -1,9 +1,9 @@
 package mongomgo
 
 import (
+	"github.com/Morditux/mongostore"
 	"github.com/gin-contrib/sessions"
 	"github.com/globalsign/mgo"
-	"github.com/kidstuff/mongostore"
 )
 
 var _ sessions.Store = (*store)(nil)
