@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-const mongoTestServer = "localhost:27017"
+const mongoTestServer = "mongodb://localhost:27017"
 
 var newStore = func(_ *testing.T) sessions.Store {
 	/*	session, err := mgo.Dial(mongoTestServer)
