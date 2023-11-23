@@ -1,22 +1,31 @@
 package mongomgo
 
 import (
+	"context"
 	"testing"
 
 	"github.com/Morditux/sessions"
 	"github.com/Morditux/sessions/tester"
-	"github.com/globalsign/mgo"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 const mongoTestServer = "localhost:27017"
 
 var newStore = func(_ *testing.T) sessions.Store {
-	session, err := mgo.Dial(mongoTestServer)
+	/*	session, err := mgo.Dial(mongoTestServer)
+		if err != nil {
+			panic(err)
+		}
+
+		c := session.DB("test").C("sessions")*/
+	clientOptions := options.Client().ApplyURI(mongoTestServer)
+	client, err := mongo.Connect(context.Background(), clientOptions)
 	if err != nil {
 		panic(err)
 	}
+	c := client.Database("test").Collection("sessions")
 
-	c := session.DB("test").C("sessions")
 	return NewStore(c, 3600, true, []byte("secret"))
 }
 
