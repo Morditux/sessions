@@ -2,7 +2,7 @@ package mongodriver
 
 import (
 	"github.com/Morditux/mongostore"
-	"github.com/gin-contrib/sessions"
+	"github.com/Morditux/sessions"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

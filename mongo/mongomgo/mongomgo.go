@@ -2,7 +2,7 @@ package mongomgo
 
 import (
 	"github.com/Morditux/mongostore"
-	"github.com/gin-contrib/sessions"
+	"github.com/Morditux/sessions"
 	"github.com/globalsign/mgo"
 )
 

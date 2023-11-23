@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-contrib/sessions/tester"
+	"github.com/Morditux/sessions"
+	"github.com/Morditux/sessions/tester"
 )
 
 const postgresTestServer = "postgres://testuser:testpw@localhost:5432/testdb?sslmode=disable"

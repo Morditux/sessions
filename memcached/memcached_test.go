@@ -3,9 +3,9 @@ package memcached
 import (
 	"testing"
 
+	"github.com/Morditux/sessions"
+	"github.com/Morditux/sessions/tester"
 	"github.com/bradfitz/gomemcache/memcache"
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-contrib/sessions/tester"
 	"github.com/memcachier/mc"
 )
 

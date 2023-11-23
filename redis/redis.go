@@ -3,8 +3,8 @@ package redis
 import (
 	"errors"
 
+	"github.com/Morditux/sessions"
 	"github.com/boj/redistore"
-	"github.com/gin-contrib/sessions"
 	"github.com/gomodule/redigo/redis"
 )
 

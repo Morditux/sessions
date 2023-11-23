@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/gin-contrib/sessions"
-	"github.com/gin-contrib/sessions/redis"
+	"github.com/Morditux/sessions"
+	"github.com/Morditux/sessions/redis"
 	"github.com/gin-gonic/gin"
 )
 
